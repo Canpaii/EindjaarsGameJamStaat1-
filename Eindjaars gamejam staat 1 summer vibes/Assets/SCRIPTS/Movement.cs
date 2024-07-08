@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
             hor = Input.GetAxisRaw("HorizontalP1");
             vert = Input.GetAxisRaw("VerticalP1");
 
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Space) && grounded)
             {
                 Jump();
             }
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
             hor = Input.GetAxisRaw("HorizontalP2");
             vert = Input.GetAxisRaw("VerticalP2");
 
-            if(Input.GetKeyDown(KeyCode.RightShift))
+            if(Input.GetKeyDown(KeyCode.RightShift) && grounded)
             {
                 Jump();
             }
