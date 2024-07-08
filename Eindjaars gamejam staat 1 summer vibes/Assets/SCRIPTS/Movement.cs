@@ -53,14 +53,30 @@ public class Movement : MonoBehaviour
         
         moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
 
-        rb.AddForce(moveDirection.normalized * speed * 10, ForceMode.Force);
+        if(!grounded)
+        {
+             rb.AddForce(moveDirection.normalized * speed * 5, ForceMode.Force);
+        }
+        else
+        {
+             rb.AddForce(moveDirection.normalized * speed * 10, ForceMode.Force);
+        }
     }  
 
     private void CheckGround()
     {   
-         Ray ray = new Ray(transform.position, UnityEngine.Vector3.down);
+        Ray ray = new Ray(transform.position, UnityEngine.Vector3.down);
 
-         grounded = Physics.Raycast(ray, rayLength * 0.5f + 0.2f, whatIsGround);
+        grounded = Physics.Raycast(ray, rayLength * 0.5f + 0.2f, whatIsGround);
+
+        if(!grounded)
+        {
+            rb.drag = 0;
+        }
+        else
+        {
+            rb.drag = 1.5f;
+        }
     }
 
      private void Jump()
