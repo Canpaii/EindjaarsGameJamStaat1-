@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     {
         Inputs();
         CheckGround();
-        rb.AddForce(UnityEngine.Vector3.down * gravity, ForceMode.Force);
+      
     }
 
     void FixedUpdate()
@@ -62,14 +62,16 @@ public class Movement : MonoBehaviour
     public void MovePlayer()
     {   
         moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
-        
+
+        rb.AddForce(UnityEngine.Vector3.down * gravity * Time.deltaTime * 10, ForceMode.Force);
+
         if(!grounded)
         {
-             rb.AddForce(moveDirection.normalized * speed * 5, ForceMode.Force);
+             rb.AddForce(moveDirection.normalized * speed * 50 * Time.deltaTime, ForceMode.Force);
         }
         else
         {
-             rb.AddForce(moveDirection.normalized * speed * 10, ForceMode.Force);
+             rb.AddForce(moveDirection.normalized * speed * 100 * Time.deltaTime, ForceMode.Force);
         }
     }
 
@@ -81,7 +83,7 @@ public class Movement : MonoBehaviour
 
         if(!grounded)
         {
-            rb.drag = 0;
+            rb.drag = 1.5f;
         }
         else
         {
@@ -89,7 +91,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-     private void Jump()
+    private void Jump()
     {
         rb.velocity = new UnityEngine.Vector3(rb.velocity.x , 0 , rb.velocity.z);
 

@@ -51,8 +51,14 @@ public class BeachBall : MonoBehaviour
             }
         }
     }
-    public void ResetBeachBall()
+    public void ResetBeachBallP1()
     {
-
+        transform.position = spawn1.position;
+        rb.velocity = Vector3.zero;
+    }
+    public void ResetBeachBallP2()
+    {
+        transform.position = spawn2.position;
+        rb.velocity = Vector3.zero;
     }
 }

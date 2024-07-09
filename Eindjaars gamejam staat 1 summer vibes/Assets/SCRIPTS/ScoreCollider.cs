@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class ScoreCollider : MonoBehaviour
 {
-    public TMP_Text scoreText;
+    public TMP_Text scoreTextP1, scoreTextP2;
     public bool player1;
 
     public float p1Score, p2Score;
     public BeachBall beachBall;
     public void Start()
     {
-        scoreText.text = p1Score.ToString() + "-" + p2Score.ToString();
+        scoreTextP1.text = p1Score.ToString();
+        scoreTextP2.text = p2Score.ToString();
     }
    void OnTriggerEnter (Collider other)
    {    
@@ -22,14 +23,14 @@ public class ScoreCollider : MonoBehaviour
             if(player1)
             {
                 p2Score ++;
-                scoreText.text = p1Score.ToString()  +  " - "  +  p2Score.ToString();
-                beachBall.ResetBeachBall();
+                scoreTextP2.text = p2Score.ToString();
+                beachBall.ResetBeachBallP2();
             }
             else
             {
                 p1Score ++;
-                scoreText.text = p1Score.ToString() + "-" + p2Score.ToString();
-                beachBall.ResetBeachBall();
+                scoreTextP1.text = p1Score.ToString();
+                beachBall.ResetBeachBallP1();
             }
         } 
    }
