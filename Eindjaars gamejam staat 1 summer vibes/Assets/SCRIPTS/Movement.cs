@@ -37,8 +37,8 @@ public class Movement : MonoBehaviour
     {       
         if(player1)
         {
-            hor = Input.GetAxisRaw("HorizontalP1");
-            vert = Input.GetAxisRaw("VerticalP1");
+            hor = Input.GetAxisRaw("Horizontal");
+            vert = Input.GetAxisRaw("Vertical");
 
             if(Input.GetKeyDown(KeyCode.Space) && grounded)
             {
