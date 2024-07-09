@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BeachBall : MonoBehaviour
 {
-   public float floatiness = 0.5f; // Higher values make the ball float more
-   public float shot;
+   public float floatiness; // Higher values make the ball float more
+   public float shotup, shotforward;
    public float hitMultiplier;
     public Transform spawn1, spawn2;
+    public Transform orientationP1, orientationP2;
     /* public Vector3 windForce = new Vector3(0.5f, 0.0f, 0.0f); // Simulate wind force
  */
     private Rigidbody rb;
@@ -34,9 +37,18 @@ public class BeachBall : MonoBehaviour
             // Calculate the force to apply
             Vector3 force = (playerRb.velocity * hitMultiplier)/95;
 
-            rb.AddForce(Vector3.up * shot/100, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * shotup/100, ForceMode.Impulse);
             // Apply the force to the ball
             rb.AddForce(force, ForceMode.Acceleration);
+
+            if (collision.transform.tag == ("Player1"))
+            {
+                rb.AddForce(orientationP1.right * shotforward/10, ForceMode.Impulse);
+            }
+            else
+            {
+                rb.AddForce(-orientationP2.right * shotforward/10, ForceMode.Impulse);
+            }
         }
     }
     public void ResetBeachBall()

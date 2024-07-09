@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1002,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.015293948, y: 0.957286, z: -0.28410205, w: 0.051533185}
+  m_LocalRotation: {x: 0.015293935, y: 0.957286, z: -0.28410205, w: 0.051533137}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 1039800437}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1205,7 @@ Rigidbody:
   m_GameObject: {fileID: 1039800432}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 8
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1235,8 +1235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650d17603e366bb47a729ecd2536b2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jumpHeight: 9
+  speed: 10
+  jumpHeight: 15
   gravity: 10
   rayLength: 2
   player1: 1
@@ -1738,7 +1738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543136814}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.015293948, y: 0.957286, z: -0.28410205, w: 0.051533185}
+  m_LocalRotation: {x: 0.015293935, y: 0.957286, z: -0.28410205, w: 0.051533137}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2092,7 +2092,7 @@ Rigidbody:
   m_GameObject: {fileID: 1878518407}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 8
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -2122,8 +2122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650d17603e366bb47a729ecd2536b2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jumpHeight: 9
+  speed: 10
+  jumpHeight: 15
   gravity: 10
   rayLength: 2
   player1: 0
@@ -2348,11 +2348,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a307717b7b836ff42b8ca541ccc289f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatiness: 0.5
-  shot: 0.001
+  floatiness: 0.8
+  shotup: 0.005
+  shotforward: 0.001
   hitMultiplier: 0.01
   spawn1: {fileID: 0}
   spawn2: {fileID: 0}
+  orientationP1: {fileID: 1495840220}
+  orientationP2: {fileID: 499926755}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
