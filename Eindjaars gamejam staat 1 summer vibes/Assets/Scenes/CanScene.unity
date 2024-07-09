@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -537,7 +537,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -879,6 +879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180543318}
+  - component: {fileID: 180543319}
   m_Layer: 0
   m_Name: FireWorkRed
   m_TagString: Untagged
@@ -901,6 +902,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180543319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180543317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25010d85a66be23428a6a00473720afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7580101459476743222, guid: 04d52c0abe7bcda40ac933e1dc921385, type: 3}
+  minZ: -10
+  maxZ: 10
+  location: -20
+  location2: 0
+  spawnRotation: {x: 0, y: 180, z: -23}
 --- !u!1 &204141195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,6 +2496,8 @@ MonoBehaviour:
   p1Score: 0
   p2Score: 0
   beachBall: {fileID: 2031072101}
+  fireWork: {fileID: 180543319}
+  fireWork2: {fileID: 1785735045}
 --- !u!1 &874838530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,6 +3576,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1111020886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.208706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
+      propertyPath: m_Name
+      value: parasol rood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ce4fdff88cc6ea4c996ae305b62b16a, type: 3}
 --- !u!1 &1130093887
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4692,8 @@ MonoBehaviour:
   p1Score: 0
   p2Score: 0
   beachBall: {fileID: 2031072101}
+  fireWork: {fileID: 180543319}
+  fireWork2: {fileID: 1785735045}
 --- !u!1 &1520947855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,7 +5252,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5541,6 +5621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785735044}
+  - component: {fileID: 1785735045}
   m_Layer: 0
   m_Name: FireworkBlue
   m_TagString: Untagged
@@ -5556,13 +5637,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785735043}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.20033647, w: 0.9797272}
   m_LocalPosition: {x: 16, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.113}
+--- !u!114 &1785735045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785735043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2cc8c063c55744dbb76e9d0c612687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2450264476799543562, guid: af04f98e7f3a6d04d85793e8fbbc46e9, type: 3}
+  minZ: -10
+  maxZ: 10
+  location: 20
+  location2: 0
+  spawnRotation: {x: 0, y: 0, z: -23}
 --- !u!1 &1802980161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +6722,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023169891}
   m_CullTransparentMesh: 1
+--- !u!1001 &2023711254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.94
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8453496
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.53421354
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -64.581
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
+      propertyPath: m_Name
+      value: parasol blauw2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 472eddee070f9bb45bfba7179ff7c40c, type: 3}
 --- !u!1 &2031072095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad12133feefae8443957da7984dd703e, type: 3}
@@ -6756,3 +6912,5 @@ SceneRoots:
   - {fileID: 1785735044}
   - {fileID: 1886103206}
   - {fileID: 666510908}
+  - {fileID: 1111020886}
+  - {fileID: 2023711254}
