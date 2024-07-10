@@ -14,6 +14,9 @@ public class Movement : MonoBehaviour
     private UnityEngine.Vector3 moveDirection;
     public Transform orientation;
     public LayerMask whatIsGround;
+
+    public bool jump;
+    public bool walk;
     
 
     bool dashP1;
@@ -25,7 +28,9 @@ public class Movement : MonoBehaviour
     {
         Inputs();
         CheckGround();
-      
+        animationchecks();
+
+
     }
 
     void FixedUpdate()
@@ -45,7 +50,7 @@ public class Movement : MonoBehaviour
                 Jump();
             }
         }
-        else
+        else if(!player1)
         {
             hor = Input.GetAxisRaw("HorizontalP2");
             vert = Input.GetAxisRaw("VerticalP2");
@@ -81,10 +86,12 @@ public class Movement : MonoBehaviour
 
         if(!grounded)
         {
+            jump = true;
             rb.drag = 1.5f;
         }
         else
         {
+            jump = false;
             rb.drag = 1.5f;
         }
     }
@@ -94,5 +101,16 @@ public class Movement : MonoBehaviour
         rb.velocity = new UnityEngine.Vector3(rb.velocity.x , 0 , rb.velocity.z);
 
         rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+    }
+    public void animationchecks()
+    {
+        if(moveDirection.magnitude != 0)
+        {
+            walk = true;
+        }
+        else
+        {
+            walk = false;
+        }
     }
 }
