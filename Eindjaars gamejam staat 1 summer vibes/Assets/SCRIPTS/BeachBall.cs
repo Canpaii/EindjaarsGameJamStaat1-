@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BeachBall : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class BeachBall : MonoBehaviour
    public float hitMultiplier;
     public Transform spawn1, spawn2;
     public Transform orientationP1, orientationP2;
+    public AudioClip hit;
+    public AudioClip[] wallCollision;
+
+    public float pitch, pitchmin, pitchMax;
     /* public Vector3 windForce = new Vector3(0.5f, 0.0f, 0.0f); // Simulate wind force
  */
     private Rigidbody rb;
@@ -49,16 +55,31 @@ public class BeachBall : MonoBehaviour
             {
                 rb.AddForce(-orientationP2.right * shotforward/10, ForceMode.Impulse);
             }
+
+            SFXManager.instance.PlaySFXClip(hit, transform ,0.3f, Pitch());
+        }
+        else 
+        {
+            SFXManager.instance.PlayMultipleSFXClip(wallCollision, transform, 1.7f, Pitch());
         }
     }
     public void ResetBeachBallP1()
     {
+        rb.velocity = Vector3.zero;
         transform.position = spawn1.position;
         rb.velocity = Vector3.zero;
     }
     public void ResetBeachBallP2()
     {
+        rb.velocity = Vector3.zero;
         transform.position = spawn2.position;
         rb.velocity = Vector3.zero;
+    }
+
+     public float Pitch()
+    {
+        pitch = Random.Range(pitchmin, pitchMax);
+
+        return pitch;
     }
 }
