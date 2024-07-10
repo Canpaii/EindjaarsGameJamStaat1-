@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject startPanel, optionsPanel;
+    public GameObject startPanel, optionsPanel, creditsPanel;
+    public bool timescale0;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        Time.timeScale = 0;
+        if(timescale0)
+        {
+            Time.timeScale = 0;
+        }
     }
 
     public void StartScherm()
@@ -36,6 +40,14 @@ public class UIManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void Credits()
+    {
+        creditsPanel.SetActive(true);
+    }
+    public void CreditsClose()
+    {
+        creditsPanel.SetActive(false);
     }
 
 }
