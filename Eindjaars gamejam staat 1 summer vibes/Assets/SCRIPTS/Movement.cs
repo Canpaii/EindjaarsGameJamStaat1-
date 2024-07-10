@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        MovePlayer();
+        Walk();
     }
 
     void Inputs()
@@ -62,7 +62,7 @@ public class Movement : MonoBehaviour
         }
     }  
 
-    public void MovePlayer()
+    public void Walk()
     {   
         moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
 
