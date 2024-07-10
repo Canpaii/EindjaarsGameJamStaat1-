@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BeachVOLLEEYBAAAAAL : MonoBehaviour
 {
    public float delay;  
+   public GameObject videoPLayer;
     void Awake()
     {
         Invoke("DisableGameObject", delay);
@@ -15,6 +16,15 @@ public class BeachVOLLEEYBAAAAAL : MonoBehaviour
     void DisableGameObject()
     {
         gameObject.SetActive(false);
+        videoPLayer.SetActive(false);
+    }
+    void Update()
+    {
+      if (Input.anyKey)
+      {
+         gameObject.SetActive(false);
+         videoPLayer.SetActive(false);
+      }
     }
 }
 

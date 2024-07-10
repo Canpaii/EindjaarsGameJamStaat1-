@@ -55,8 +55,6 @@ public class Movement : MonoBehaviour
                 Jump();
             }
         }
-        
-       
     }  
 
     public void MovePlayer()
