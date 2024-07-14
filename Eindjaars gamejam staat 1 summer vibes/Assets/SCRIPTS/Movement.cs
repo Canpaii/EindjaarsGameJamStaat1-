@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
 
     public void Walk()
     {   
-        moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
+        /* moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
 
         rb.AddForce(UnityEngine.Vector3.down * gravity * Time.deltaTime * 10, ForceMode.Force);
 
@@ -75,7 +75,11 @@ public class Movement : MonoBehaviour
         else
         {
              rb.AddForce(moveDirection.normalized * speed * 100 * Time.deltaTime, ForceMode.Force);
-        }
+        } */
+
+        moveDirection = orientation.transform.forward * vert + orientation.transform.right * hor;
+
+        transform.Translate(moveDirection);
     }
 
     private void CheckGround()
@@ -87,12 +91,12 @@ public class Movement : MonoBehaviour
         if(!grounded)
         {
             jump = true;
-            rb.drag = 1.5f;
+            rb.drag = 3f;
         }
         else
         {
             jump = false;
-            rb.drag = 1.5f;
+            rb.drag = 3f;
         }
     }
 
